@@ -5,6 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // 静态导出时确保 CSS 正确引用
+  trailingSlash: true,
 };
 
 export default nextConfig;

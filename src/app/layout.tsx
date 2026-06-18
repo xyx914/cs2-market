@@ -23,21 +23,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="zh-CN"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
-        <header className="border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
-          <nav className="max-w-5xl mx-auto px-6 h-14 flex items-center gap-6">
-            <a href="/" className="font-bold text-lg tracking-tight">aasdso.top</a>
-            <a href="#docs" className="text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-300 transition-colors">文档</a>
-            <a href="#tools" className="text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-300 transition-colors">工具</a>
+    <html lang="zh-CN" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body style={{ margin: 0, minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#fafafa', color: '#111827', fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif' }}>
+        {/* Header */}
+        <header style={{ borderBottom: '1px solid #e5e7eb', backgroundColor: '#fff' }}>
+          <nav style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px', height: 56, display: 'flex', alignItems: 'center', gap: 24 }}>
+            <a href="/" style={{ fontWeight: 700, fontSize: 17, textDecoration: 'none', color: '#111827', letterSpacing: '-0.02em' }}>aasdso.top</a>
+            <a href="#docs" style={{ fontSize: 14, color: '#6b7280', textDecoration: 'none', transition: 'color 0.15s' }}>文档</a>
+            <a href="#tools" style={{ fontSize: 14, color: '#6b7280', textDecoration: 'none', transition: 'color 0.15s' }}>工具</a>
           </nav>
         </header>
-        <main className="flex-1 w-full max-w-5xl mx-auto px-6 py-12">{children}</main>
-        <footer className="border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
-          <div className="max-w-5xl mx-auto px-6 py-8 text-center text-sm text-zinc-400">
+        <main style={{ flex: 1, width: '100%' }}>{children}</main>
+        {/* Footer */}
+        <footer style={{ borderTop: '1px solid #e5e7eb', backgroundColor: '#fff' }}>
+          <div style={{ maxWidth: 960, margin: '0 auto', padding: '32px 24px', textAlign: 'center', fontSize: 14, color: '#9ca3af' }}>
             © {new Date().getFullYear()} aasdso.top
           </div>
         </footer>
